@@ -1,0 +1,12 @@
+[package]
+name = "pigments"
+version = "0.0.0"
+authors = ["Xavier Basty <xavier@hexbee.net>"]
+description = "Color manipulation in Rust."
+repository = "https://github.com/hexbee-net/pigments"
+readme = "README.md"
+keywords = ["color", "rgb", "cielab", "cmyk", "hsv"]
+license = "Apache-2.0"
+edition = "2018"
+
+[dependencies]
