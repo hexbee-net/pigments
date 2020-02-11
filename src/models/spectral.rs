@@ -1,4 +1,4 @@
-// Copyright © 2019 Xavier Basty <xavier@hexbee.net>
+// Copyright © 2020 Xavier Basty <xavier@hexbee.net>
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,14 +12,4 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-extern crate cached;
-
-pub mod adaptation;
-pub mod colorimetry;
-pub mod models;
-
-pub struct Spectrum<T: ?Sized> {
-    start: u32,
-    interval: u32,
-    values: T
-}
+//! # Spectral power distribution

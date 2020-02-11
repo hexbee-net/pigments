@@ -1,4 +1,4 @@
-// Copyright © 2019 Xavier Basty <xavier@hexbee.net>
+// Copyright © 2020 Xavier Basty <xavier@hexbee.net>
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -12,14 +12,24 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-extern crate cached;
+//! # RGB (red, green, blue) color space
 
-pub mod adaptation;
-pub mod colorimetry;
-pub mod models;
+pub mod color_space;
 
-pub struct Spectrum<T: ?Sized> {
-    start: u32,
-    interval: u32,
-    values: T
+#[derive(PartialEq, Clone, Copy, Debug)]
+pub struct Rgb {
+    pub r: f64,
+    pub g: f64,
+    pub b: f64,
+
+    pub space: color_space::ColorSpace,
+}
+
+impl Rgb {
+    fn to_rgb(&self, space: color_space::ColorSpace) -> &Rgb {
+        // M = RGB_to_RGB_matrix(input_colorspace, output_colorspace, chromatic_adaptation_transform)
+        // RGB = dot_vector(M, RGB)
+        // return from_range_1(RGB)
+        unimplemented!();
+    }
 }
